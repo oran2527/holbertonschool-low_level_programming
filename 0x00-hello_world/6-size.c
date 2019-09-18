@@ -5,15 +5,12 @@
  *
  * Return: Always 0 (Success)
  */
-
-int main()
+int main(void)
 {
-	   printf("Size of a char: %d",(int) sizeof(char*));
-           printf("Size of an int: %d",(int) sizeof(int*));
-	   printf("Size of a long int: %d",(int) sizeof(long int*));
-	   printf("Size of a long long int: %d",(int) sizeof(double*));
-	   printf("Size of a float: %d",(int) sizeof(float*));
-	   return (0);
+	printf("Size of a char: %d"            ,sizeof(char*));
+	printf("Size of an int: %d"            ,sizeof(int*));
+        printf("Size of a long int: %d"        ,sizeof(long int*));
+	printf("Size of a long long int: %d\n" ,sizeof(double*));
+	printf("Size of a float: %d"           ,sizeof(float*));
+	return (0);
 }
-
-
