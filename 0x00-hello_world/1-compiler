@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE o-$CFILE.o | ls | find . -name $CFILE.o | rename 's/.c.o/.o/g'
+gcc -S $CFILE o- $CFILE.o | ls | find . -name $CFILE.o | rename 's/.c.o/.o/g'
