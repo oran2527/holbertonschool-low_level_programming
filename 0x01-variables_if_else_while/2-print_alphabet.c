@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-	int ch;
+	int n;
 
 	srand(time(0));
-	ch = rand() - RAND_MAX / 2;
-	for (ch = 'a'; ch <= 'z'; ch++)
+	n = rand() - RAND_MAX / 2;
+	for (n = 'a'; n <= 'z'; n++)
 	{
-		putchar(ch);
+		putchar(n);
 	}
 	putchar('\n');
 	return (0);
