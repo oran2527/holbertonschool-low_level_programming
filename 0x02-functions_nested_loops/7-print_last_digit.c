@@ -15,6 +15,11 @@ if (n > 0)
 {
 n = n - ((n / 10) * 10);
 }
+if (n == 0)
+{
+n = n;
+}
 _putchar(n + '0');
 return (n);
+return (0);
 }
