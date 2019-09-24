@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_alphabet - prints
+ * print_alphabet_x10 - prints
  * @void
  *
  * Return: On success 1.
