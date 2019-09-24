@@ -18,17 +18,15 @@ if ((n * c) == 0 && c == 0)
 {
 _putchar((n * c) + 48);
 }
-if ((n * c) <= 9 && c != 0)
-{
 _putchar(',');
 _putchar(' ');
+if ((n * c) <= 9 && c != 0)
+{
 _putchar(' ');
 _putchar((n * c) + 48);
 }
 if ((n * c) >= 10 && c != 0)
 {
-_putchar(',');
-_putchar(' ');
 _putchar(((n * c) / 10) + 48);
 _putchar(((n * c) % 10) + 48);
 }
