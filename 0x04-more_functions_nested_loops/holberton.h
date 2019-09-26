@@ -1,0 +1,16 @@
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
+
+/*
+ * Structs, enums and unions definitions
+ * Typedefs
+ * prototypes
+ */
+
+int _putchar(char c);
+int _isupper(char);
+int _isdigit(char);
+int mul(int a, int b);
+void print_numbers(void);
+
+#endif /* _HOLBERTON_H_ */
