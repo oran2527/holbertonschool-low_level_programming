@@ -1,16 +1,13 @@
 #include <stdio.h>
-
 /**
  * main - check the code for Holberton School students.
- *
+ * 
  * Return: Always 0.
  */
 int main(void)
 {
 	int n;
-	char Fizz[] = "Fizz";
-	char Buzz[] = "Buzz";
-
+	
 	for (n = 1; n <= 100; n++)
 	{
 		if (n % 3 != 0 && n % 5 != 0)
@@ -22,9 +19,9 @@ int main(void)
 		else
 		{
 			if (n % 3 == 0)
-				printf("%s", Fizz);
+				printf("Fizz");
 			if (n % 5 == 0)
-				printf("%s", Buzz);
+				printf("Buzz");
 		}
 		
 		if (n != 100)
