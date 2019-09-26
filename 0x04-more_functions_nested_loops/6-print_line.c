@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_line - prints
- * @n: The amount of underlines to print
+ * @n: The character to print
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  **/
