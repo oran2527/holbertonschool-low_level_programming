@@ -18,22 +18,17 @@ void print_triangle(int size)
 			for (d = 1; d <= size - n; d++)
 			{
 				_putchar(' ');
-				
 			}
-
 			for (c = 1; c <= n; c++)
 			{
 				_putchar('#');
 			}
-			
 			if(n != size)
 			{
 				_putchar('\n');
 			}
 		}
-		
 		_putchar('\n');
-
 	}
 	else
 	{
