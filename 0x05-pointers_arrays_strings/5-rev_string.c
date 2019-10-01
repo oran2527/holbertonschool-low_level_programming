@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
  * rev_string - prints
  * @s: The character to print
@@ -8,12 +8,17 @@
  **/
 void rev_string(char *s)
 {
-
 	int i;
-	char cadena[sizeof(s) + 1];
 	int large;
-
-	large = (int)sizeof(s) + 1;
+	char *cadena;
+	
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	large = i;
+	cadena = (char *) malloc(large * sizeof(char));
 	for (i = 0; i <= large; i++)
 	{
 		cadena[i] = (char) *(s + i);
@@ -21,5 +26,5 @@ void rev_string(char *s)
 	for (i = 0; i <= large; i++)
 	{
 		*(s + i) = cadena[large - i - 1];
-	}
+	}	
 }
