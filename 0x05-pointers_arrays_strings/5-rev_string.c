@@ -14,7 +14,7 @@ void rev_string(char *s)
 	int i;
 	int c;
 	int j;
-	char *cadena [sizeof(s)];
+	char cadena [sizeof(s)];
 
 	strputs = s;
 	i = 0;
@@ -25,8 +25,9 @@ void rev_string(char *s)
 	j = 0;
 	for (c = i; c >= 0; c--)
 	{
-		cadena[j] = strputs[c];
+		cadena[j] = (char)strputs[c];
 		++j;
+		putchar(cadena[j] + 48);
 	}
-	s = cadena;
+	putchar('\n');
 }

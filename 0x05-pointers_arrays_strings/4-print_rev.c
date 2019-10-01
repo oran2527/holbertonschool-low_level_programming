@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include<string.h>
 #include "holberton.h"
 
@@ -13,7 +12,7 @@ void print_rev(char *s)
 	char *strputs;
 	int i;
 	int c;
-	
+
 	strputs = s;
 	i = 0;
 	while (strputs[i] != '\0')
