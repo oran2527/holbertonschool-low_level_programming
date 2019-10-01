@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_rev - prints
@@ -8,19 +9,17 @@
  **/
 void print_rev(char *s)
 {
-	char *strputs;
 	int i;
 	int c;
 
-	strputs = s;
 	i = 0;
-	while (strputs[i] != '\0')
+	while (s[i] != '\0')
 	{
-		++i;
+		i++;
 	}
 	for (c = i; c >= 0; c--)
 	{
-		_putchar(strputs[c]);
+		_putchar(s[c]);
 	}
 	_putchar('\n');
 }
