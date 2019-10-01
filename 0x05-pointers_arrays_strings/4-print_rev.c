@@ -12,18 +12,17 @@ void print_rev(char *s)
 {
 	char *strputs;
 	int i;
-	char cadena[strlen(s)];
+	int c;
 	
 	strputs = s;
 	i = 0;
 	while (strputs[i] != '\0')
 	{
-		cadena[i] = strputs[i];
 		++i;
 	}
-	for (i = strlen(cadena); i <= 0; i--)
+	for (c = i; c >= 0; c--)
 	{
-		_putchar(strputs[i]);
+		_putchar(strputs[c]);
 	}
 	_putchar('\n');
 }
