@@ -1,5 +1,5 @@
-#include<string.h>
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * rev_string - prints
@@ -9,24 +9,18 @@
  **/
 void rev_string(char *s)
 {
-	char *strputs;
-	int i;
-	int c;
-	int j;
-	char cadena [sizeof(s)];
 
-	strputs = s;
-	i = 0;
-	while (strputs[i] != '\0')
+	int i;
+	char cadena[sizeof(s) + 1];
+	int large;
+
+	large = (int)sizeof(s) + 1;
+	for (i = 0; i <= large; i++)
 	{
-		++i;
+		cadena[i] = (char) *(s + i);
 	}
-	j = 0;
-	for (c = i; c >= 0; c--)
+	for (i = 0; i <= large; i++)
 	{
-		cadena[j] = (char)strputs[c];
-		++j;
-		putchar(cadena[j] + 48);
+		*(s + i) = cadena[large - i - 1];
 	}
-	putchar('\n');
 }
