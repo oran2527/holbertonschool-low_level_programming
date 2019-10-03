@@ -10,8 +10,17 @@
  **/
 int _strcmp(char *s1, char *s2)
 {
-	int final;
+	int resultado, totals1, totals2;
 
-	final = strcmp(s1, s2);
-	return (final);
+	for (totals1 = 0; *(s1 + totals1) != '\0'; totals1++)
+	for (totals2 = 0; *(s2 + totals2) != '\0'; totals2++)
+	if (totals1 < totals2)
+		resultado = -15;
+	else if (totals1 > totals2)
+		resultado = 15;
+	else
+		resultado = 0;
+	return (resultado);
 }
+
+
