@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * *_strncat - prints
+ * _strncat - prints
  * @dest: The character to print
  * @src: The character to print
  * @n: The character to print
@@ -11,8 +11,16 @@
  **/
 char *_strncat(char *dest, char *src, int n)
 {
-	char *final;
+	int count_dest, count_src;
 
-	final = strncat(dest, src, n);
-	return (final);
+	for (count_dest = 0; *(dest + count_dest) != '\0'; )
+		count_dest++;
+
+	for (count_src = 0; count_src <= n - 1; count_src++)
+	{
+		*(dest + count_dest) = *(src + count_src);
+		count_dest++;
+	}
+	*(dest + count_dest++) = '\0';
+	return (dest);
 }
