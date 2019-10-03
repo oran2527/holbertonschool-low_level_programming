@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 /**
  * _strcat - prints
  * @dest: The character to print
