@@ -1,15 +1,15 @@
 #include "holberton.h"
-
 /**
  * cap_string - prints
  * @c: The character to print
  * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * On error, -1 is returned, and errno is set.
  **/
 char *cap_string(char *c)
 {
 	int i = 0, d = 0, len = 0;
-	char list[] = { 32, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 9 };
+	char list[] = { ' ', '\n', '\t', ',', ';', '.', '!',
+		'?', '"', '(', ')', '{', '}' };
 
 	while (list[len] != '\0')
 		len++;
