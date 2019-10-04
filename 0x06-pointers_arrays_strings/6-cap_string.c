@@ -1,6 +1,5 @@
 #include "holberton.h"
-#include <ctype.h>
-
+#include <stdio.h>
 /**
  * cap_string - prints
  * @c: The character to print
@@ -9,33 +8,26 @@
  **/
 char *cap_string(char *c)
 {
-	int i;
-
-	i = 0;
-
+	int i = 0, d = 0, len = 0;
+	char list[] = { 32, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 9 };
+	
+	while (list[len] != '\0')
+		len ++;
+	
 	while (*(c + i) != '\0')
 	{
-
-		if ((
-			(*(c + i - 1)) == 32 ||
-			(*(c + i - 1)) == 10 ||
-			(*(c + i - 1)) == 44 ||
-			(*(c + i - 1)) == 59 ||
-			(*(c + i - 1)) == 46 ||
-			(*(c + i - 1)) == 33 ||
-			(*(c + i - 1)) == 63 ||
-			(*(c + i - 1)) == 34 ||
-			(*(c + i - 1)) == 40 ||
-			(*(c + i - 1)) == 41 ||
-			(*(c + i - 1)) == 123 ||
-			(*(c + i - 1)) == 125 ||
-			(*(c + i - 1)) == 9
-		) && (
-			(*(c + i)) >= 97 &&
-			(*(c + i)) <= 122
-		))
+		for (d = 0; d < len; d++)
 		{
-			*(c + i) = toupper(*(c + i));
+			if (*(c + i) == list[d])
+			{
+				if (*(c + i + 1) != list[d])
+				{
+					if (*(c + i + 1) >= 97 && *(c + i + 1) <= 122)
+					{
+						*(c + i + 1) += -32;
+					}
+				}
+			}
 		}
 		i++;
 	}
