@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * reverse_array - prints
  * @a: The character to print
@@ -12,14 +12,14 @@ void reverse_array(int *a, int n)
 {
 	int *final;
 	int i;
-	
+
 	final = (int *) malloc(n * sizeof(int));
-	for (i = 0; i <= n -1; i++)
+	for (i = 0; i < n ; i++)
 	{
-		final[i] = *(a + i);		
+		*(final + i) = *(a + i);
 	}
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		*(a + i) = final[n - i - 1];
+		*(a + i) = *(final + (n - i - 1));
 	}
 }
