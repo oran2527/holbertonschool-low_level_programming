@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <ctype.h>
-
 /**
  * leet - prints
  * @c: The character to print
@@ -9,21 +7,17 @@
  **/
 char *leet(char *c)
 {
-	int i;
-	char change;
+	char cadena[] = { 'a', 'A', 'e', 'E', 'o', 'O', 't', 'T' };
+	char decode[] = { '4', '4', '3', '3', '0', '0', '7', '7' };
+	int i = 0, j;
 
-	i = 0;
 	while (*(c + i) != '\0')
 	{
-		if (*(c + i) == 'a' || *(c + i) == 'A')
-			change = '4';					
-		if (*(c + i) == 'e' || *(c + i) == 'E')
-			change = '3';		
-		if (*(c + i) == 'o' || *(c + i) == 'O')
-			change = '0';		
-		if (*(c + i) == 't' || *(c + i) == 'T')
-			change = '7';		
-		if (*(c + i) == 'a' || *(c + i) == 'A')
+		for (j = 0; j < (int)(sizeof(cadena) / sizeof(char)); j++)
+		{
+			if (*(c + i) == cadena[j])
+				*(c + i) = decode[j];
+		}
 		i++;
 	}
 	return (c);
