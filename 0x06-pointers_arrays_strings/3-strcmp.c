@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * _strcmp - prints
@@ -10,16 +9,16 @@
  **/
 int _strcmp(char *s1, char *s2)
 {
-	int resultado, totals1, totals2;
+	int resultado = 0;
 
-	for (totals1 = 0; *(s1 + totals1) != '\0'; totals1++)
-	for (totals2 = 0; *(s2 + totals2) != '\0'; totals2++)
-	if (totals1 < totals2)
-		resultado = -15;
-	else if (totals1 > totals2)
-		resultado = 15;
-	else
-		resultado = 0;
+	while (*s1 != '\0')
+	{
+		if (*s1 != *s2)
+			resultado = *s1 - *s2;
+			break;
+		s1++;
+		s2++;
+	}	
 	return (resultado);
 }
 
