@@ -16,6 +16,8 @@ char *cap_string(char *c)
 
 	while (*(c + i) != '\0')
 	{
+		if (*(c + 0) >= 97 && *(c + 0) <= 122)
+			*(c + 0) -= 32;
 		for (d = 0; d < len; d++)
 		{
 			if (*(c + i) == list[d])
