@@ -19,10 +19,11 @@ char *rot13(char *c)
 			't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd',
 			'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm' };
 	int index = 0, index_code;
-	
+
 	while (*(c + index) != '\0')
 	{
-		for (index_code = 0; (index_code < (int)(sizeof(code) / sizeof(char))); index_code++)
+		for (index_code = 0; (index_code < (int)(sizeof(code) / sizeof(char)));
+				index_code++)
 		{
 			if (code[index_code] == *(c + index))
 			{
