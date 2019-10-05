@@ -7,8 +7,8 @@
  **/
 char *leet(char *c)
 {
-	char cadena[] = { 'a', 'A', 'e', 'E', 'o', 'O', 't', 'T' };
-	char decode[] = { '4', '4', '3', '3', '0', '0', '7', '7' };
+	char cadena[] = { 'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L' };
+	char decode[] = { '4', '4', '3', '3', '0', '0', '7', '7', '1', '1' };
 	int i = 0, j;
 
 	while (*(c + i) != '\0')
