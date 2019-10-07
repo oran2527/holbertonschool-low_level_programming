@@ -13,7 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 	int i, j;
 	unsigned int resul = 0;
 	int flag  = 0;
-	
+
 	for (i = 0; *(accept + i) != '\0'; i++)
 		++elements_accept;
 	for (i = 0; *(s  + i) != '\0'; i++)
@@ -33,7 +33,7 @@ unsigned int _strspn(char *s, char *accept)
 				{
 					flag = 1;
 				}
-				
+
 			}
 		}
 		else
