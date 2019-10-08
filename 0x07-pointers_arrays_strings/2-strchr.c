@@ -21,5 +21,8 @@ char *_strchr(char *s, char c)
 			return (pointer);
 		pointer++;
 	}
-	return (pointer);
+	if (*pointer == c)
+		return (pointer);
+	else
+		return (NULL);
 }
