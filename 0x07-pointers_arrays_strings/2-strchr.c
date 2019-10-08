@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _strchr - prints
@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 	pointer = s;
 	while (*pointer != '\0')
 	{
-		if(pointer == NULL)
+		if (pointer == NULL)
 			return (NULL);
 		else if (*pointer == c)
 			return (pointer);
