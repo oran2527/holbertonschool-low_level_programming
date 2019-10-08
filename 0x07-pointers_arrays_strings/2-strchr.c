@@ -12,12 +12,12 @@ char *_strchr(char *s, char c)
 {
 	char *pointer;
 
-	if (s == NULL)
-		return (NULL);
 	pointer = s;
 	while (*pointer != '\0')
 	{
-		if (*pointer == c)
+		if(pointer == NULL)
+			return (NULL);
+		else if (*pointer == c)
 			return (pointer);
 		pointer++;
 	}
