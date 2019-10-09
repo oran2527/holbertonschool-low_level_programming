@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strlen_recursion - prints
  * @s: The character to print
@@ -7,11 +8,17 @@
  **/
 int _strlen_recursion(char *s)
 {
-	int i;
+	int length = 0;
+	int increment = 0;
 
 	if (*s != '\0')
-	{			
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+	{
+		increment++;
+		length += increment + _strlen_recursion(s + 1);	
+		return (length);
+	}
+	else
+	{
+		return (0);
 	}
 }
