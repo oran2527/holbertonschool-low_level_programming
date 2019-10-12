@@ -1,40 +1,39 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
  * main - principal function
  * @argc: Count arguments
  * @argv: arguments strings
  * Return: Print all the arguments strings.
- * On error, -1 is returned, and errno is set appropriately.
  **/
 int main(int argc, char *argv[])
 {
-	int i;
-	int resul = 0;
-
-	if (argc == 1)
-	{
-		printf("%d\n", argc - 1);
-		return (0);
-	}
+	int i, j, resul = 0, advice = 0;
+	
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) == 0 && *argv[i] != '0')
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (argv[i][j] >= 48 && argv[i][j] <= 57)
+					resul += atoi(argv[i]);				
+				else
+					advice = 1;
 			}
-			else
-			{
-				resul += atoi(argv[i]);
-			}
+			if (advice == 1)
+				break;
 		}
-		printf("%d\n", resul);
-		return (0);
+		if (advice == 0)
+			printf("%d\n", resul);
+		if (advice == 1)
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
+	else 
+		printf("%c\n", '0');
 	return (0);
 }
