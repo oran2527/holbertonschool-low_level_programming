@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - principal function
  * @argc: Count arguments
@@ -9,8 +10,7 @@
  **/
 int main(int argc, char *argv[])
 {
-	if (argc == 1)
-		printf("%s\n", argv([0]));
+	printf("%s\n", argv[argc - argc]);
 	return (0);
 }
 
