@@ -22,10 +22,10 @@ int main(int argc, char *argv[])
 				if (advice == 1)
 					break;
 			}
-			if (advice == 1)
-				break;
-			else
+			if (advice == 0)
 				resul += atoi(argv[i]);
+			else
+				break;
 		}
 		if (advice == 0)
 			printf("%d\n", resul);
