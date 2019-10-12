@@ -1,0 +1,12 @@
+#include "holberton.h"
+/**
+ * _strspn - information
+ * @s: information
+ * @accept: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+unsigned int _strspn(char *s, char *accept)
+{
+
+}

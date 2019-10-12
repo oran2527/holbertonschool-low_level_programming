@@ -1,0 +1,12 @@
+#include "holberton.h"
+/**
+ * _strchr - prints
+ * @s: information
+ * @c: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strchr(char *s, char c)
+{
+
+}

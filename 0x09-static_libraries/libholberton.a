@@ -1,0 +1,254 @@
+!<arch>
+0-memset.o/     1570907287  1000  1000  100664  241       `
+#include "holberton.h"
+/**
+ * _memset - prints
+ * @s: The character to print
+ * @b: The
+ * @n: The
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_memset(char *s, char b, unsigned int n)
+{
+
+}
+
+0-strcat.o/     1570907388  1000  1000  100664  225       `
+#include "holberton.h"
+/**
+ * _strcat - prints
+ * @dest: The character to print
+ * @src: The
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strcat(char *dest, char *src)
+{
+
+}
+
+100-atoi.o/     1570914468  1000  1000  100664  200       `
+#include "holberton.h"
+/**
+ * _atoi - prints
+ * @s: informationThe character to print
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _atoi(char *s)
+{
+
+}
+1-isdigit.o/    1570907466  1000  1000  100664  193       `
+#include "holberton.h"
+/**
+ * _isdigit - prints
+ * @c: The character to print
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _isdigit(int c)
+{
+
+}
+
+1-memcpy.o/     1570907556  1000  1000  100664  252       `
+#include "holberton.h"
+/**
+ * _memcpy - prints
+ * @dest: The character to print
+ * @src: The
+ * @n: The
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+
+}
+1-strncat.o/    1570914164  1000  1000  100664  250       `
+#include "holberton.h"
+/**
+ * _strncat - prints
+ * @dest: information
+ * @src: information
+ * @n: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strncat(char *dest, char *src, int n)
+{
+
+}
+2-strchr.o/     1570914581  1000  1000  100664  211       `
+#include "holberton.h"
+/**
+ * _strchr - prints
+ * @s: information
+ * @c: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strchr(char *s, char c)
+{
+
+}
+
+2-strlen.o/     1570914688  1000  1000  100664  182       `
+#include "holberton.h"
+/**
+ * _strlen - prints
+ * @s: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _strlen(char *s)
+{
+
+}
+2-strncpy.o/    1570914803  1000  1000  100664  250       `
+#include "holberton.h"
+/**
+ * _strncpy - prints
+ * @dest: information
+ * @src: information
+ * @n: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strncpy(char *dest, char *src, int n)
+{
+
+}
+3-islower.o/    1570915011  1000  1000  100664  182       `
+#include "holberton.h"
+/**
+ * _islower - prints
+ * @c: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _islower(int c)
+{
+
+}
+3-puts.o/       1570915163  1000  1000  100664  179       `
+#include "holberton.h"
+/**
+ * _puts - prints
+ * @s: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+void _puts(char *s)
+{
+
+}
+
+3-strcmp.o/     1570915292  1000  1000  100664  220       `
+#include "holberton.h"
+/**
+ * _strcmp - information
+ * @s1: information
+ * @s2: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _strcmp(char *s1, char *s2)
+{
+	
+}
+3-strspn.o/     1570915405  1000  1000  100664  234       `
+#include "holberton.h"
+/**
+ * _strspn - information
+ * @s: information
+ * @accept: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+unsigned int _strspn(char *s, char *accept)
+{
+
+}
+4-isalpha.o/    1570915513  1000  1000  100664  187       `
+#include "holberton.h"
+/**
+ * _isalpha - information
+ * @c: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _isalpha(int c)
+{
+
+}
+
+4-strpbrk.o/    1570915828  1000  1000  100664  229       `
+#include "holberton.h"
+/**
+ * _strpbrk - information
+ * @s: information
+ * @accept: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strpbrk(char *s, char *accept)
+{
+
+}
+
+5-strstr.o/     1570915915  1000  1000  100664  241       `
+#include "holberton.h"
+/**
+ * _strstr - information
+ * @haystack: information
+ * @needle: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strstr(char *haystack, char *needle)
+{
+
+}
+
+6-abs.o/        1570916004  1000  1000  100664  179       `
+#include "holberton.h"
+/**
+ * _abs - information
+ * @n: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _abs(int n)
+{
+
+}
+
+9-strcpy.o/     1570916198  1000  1000  100664  227       `
+#include "holberton.h"
+/**
+ * _strcpy - information
+ * @dest: information
+ * @src: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strcpy(char *dest, char *src)
+{
+
+}
+
+_putchar.o/     1570916291  1000  1000  100664  188       `
+#include "holberton.h"
+/**
+ * _putchar - information
+ * @c: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _putchar(char c)
+{
+
+}

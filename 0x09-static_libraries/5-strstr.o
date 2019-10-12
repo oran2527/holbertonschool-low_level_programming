@@ -1,0 +1,12 @@
+#include "holberton.h"
+/**
+ * _strstr - information
+ * @haystack: information
+ * @needle: information
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+char *_strstr(char *haystack, char *needle)
+{
+
+}
