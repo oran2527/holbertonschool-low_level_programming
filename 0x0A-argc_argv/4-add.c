@@ -10,7 +10,7 @@
  **/
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i;
 	int resul = 0;
 
 	if (argc == 1)
@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
 	}
 	if (argc > 1)
 	{
-		for ( ; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) > 0 || atoi(argv[i]))
+			if (atoi(argv[i]) > 0 || atoi(argv[i]) < 0)
 			{
 				resul += atoi(argv[i]);
 			}
