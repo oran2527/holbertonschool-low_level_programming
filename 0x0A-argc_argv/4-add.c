@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int i, j, resul = 0, advice = 0;
 
 	if (argc == 1)
-		printf("%d\n", 0);
+		printf("%d\n", resul)
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		if (advice == 1)
 		{
 			printf("Error\n");
-			return (0);
+			return (1);
 		}
 	}
 	return (0);
