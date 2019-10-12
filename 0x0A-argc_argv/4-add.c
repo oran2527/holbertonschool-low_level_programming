@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	{
 		for ( ; i < argc; i++)
 		{
-			if (atoi(argv[i] != 0))
+			if (atoi(argv[i]) > 0 || atoi(argv[i]))
 			{
 				resul += atoi(argv[i]);
 			}
