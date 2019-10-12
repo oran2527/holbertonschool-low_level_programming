@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - principal function
  * @argc: Count arguments
@@ -22,14 +23,14 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) > 0 || atoi(argv[i]) < 0)
-			{
-				resul += atoi(argv[i]);
-			}
-			else
+			if (atoi(argv[i]) == 0)
 			{
 				printf("Error\n");
 				return (1);
+			}
+			else
+			{
+				resul += atoi(argv[i]);
 			}
 		}
 		printf("%d\n", resul);
