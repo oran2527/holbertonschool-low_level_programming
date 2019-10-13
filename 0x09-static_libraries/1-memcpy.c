@@ -1,36 +1,18 @@
 #include "holberton.h"
-int getLength(char *s);
+
 /**
- *_memcpy - concatnate
- *@dest: dest pointer
- *@src: src pointer
- *@n: int
- *Return: something
-    */
+ * _memcpy - prints
+ * @dest: The character to print
+ * @src: The character to print
+ * @n: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int pos = 0;
+	unsigned int i;
 
-	while (pos < n)
-	{
-		(*(dest + pos)) = (*(src + pos));
-		pos++;
-	}
+	for (i = 0; i < n; i++)
+		*(dest + i) = *(src + i);
 	return (dest);
-}
-/**
-  *getLength - concatnate
-  *@s: dest pointer
-  *Return: something
-  */
-
-int getLength(char *s)
-{
-	int le = 0;
-
-	while (*(s + le) != '\0')
-	{
-		le++;
-	}
-	return (le);
 }

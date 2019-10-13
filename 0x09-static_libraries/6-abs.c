@@ -1,19 +1,20 @@
 #include "holberton.h"
 /**
-*_abs - it prints alphabet
-*@c: some
-*Return: true if lower
-*/
-int _abs(int c)
+ * _abs - prints
+ * @n: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _abs(int n)
 {
-int ans;
-if (c < 0)
+if (n >= 0)
 {
-ans  = (-1) * c;
+return (n);
 }
-else
+if (n < 0)
 {
-ans = c;
+n = n * (-1);
+return (n);
 }
-return (ans);
+return (0);
 }

@@ -1,38 +1,25 @@
 #include "holberton.h"
-#include <stdio.h>
-int getCharSize(char *s);
+#include <string.h>
+
 /**
- *_strcpy - swap values
- *@dest: char to size
- *@src: size
- *Return: pointer
- */
+ * _strcpy - prints
+ * @dest: The character to print
+ * @src: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 char *_strcpy(char *dest, char *src)
 {
-	int pos = 0;
+	char *start;
 
-	while (src[pos] != '\0')
+	start = dest;
+
+	while (*src != '\0')
 	{
-		dest[pos] = src[pos];
-		if (src[pos + 1] == '\0')
-			dest[pos + 1] = src[pos + 1];
-		pos++;
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	return (dest);
-}
-/**
- *getCharSize - l
- *@s: l
- *Return:le
- */
-
-int getCharSize(char *s)
-{
-	int co = 0;
-
-	while (s[co] != '\0')
-	{
-		co++;
-	}
-	return (co);
+	*dest = '\0';
+	return (start);
 }

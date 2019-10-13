@@ -1,38 +1,28 @@
 #include "holberton.h"
-#include <stddef.h>
-int getLength(char *s);
+#include <stdlib.h>
+
 /**
- *_strchr - concatnate
- *@s: dest pointer
- *@c: src pointer
-*Return: something
- */
+ * _strchr - prints
+ * @s: The character to print
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 char *_strchr(char *s, char c)
 {
-	int pos = 0;
+	char *pointer;
 
-	while ((*(s + pos)) != c  && (*(s + pos)) != '\0')
+	pointer = s;
+	while (*pointer != '\0')
 	{
-		pos++;
+		if (pointer == NULL)
+			return (NULL);
+		else if (*pointer == c)
+			return (pointer);
+		pointer++;
 	}
-	if ((*(s + pos)) == c)
-		return (s + pos);
+	if (*pointer == c)
+		return (pointer);
 	else
-		return (0);
-}
-/**
-*getLength - concatnate
-*@s: dest pointer
-*Return: something
-*/
-
-int getLength(char *s)
-{
-	int le = 0;
-
-	while (*(s + le) != '\0')
-	{
-		le++;
-	}
-	return (le);
+		return (NULL);
 }

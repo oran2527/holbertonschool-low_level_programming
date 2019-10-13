@@ -1,16 +1,19 @@
+#include<stdio.h>
+#include<string.h>
 #include "holberton.h"
+
 /**
- *_strlen - swap values
- *@s: char to size
- *Return: count
- */
+ * _strlen - prints
+ * @s: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 int _strlen(char *s)
 {
-	int co = 0;
+	char *p;
 
-	while (s[co] != '\0')
-	{
-		co++;
-	}
-	return (co);
+	p = s;
+	while (*p)
+		++p;
+	return (p - s);
 }

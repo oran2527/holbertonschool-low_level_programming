@@ -1,38 +1,27 @@
 #include "holberton.h"
-int getLength(char *s);
+
 /**
- *_strcmp - concatnate
- *@s1: dest pointer
- *@s2: src pointer
- *Return: something
- */
+ * _strcmp - prints
+ * @s1: The character to print
+ * @s2: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 int _strcmp(char *s1, char *s2)
 {
-	int pos = 0;
-	int res;
+	int resultado = 0;
 
-	while ((*(s1 + pos) != '\0' && *(s2 + pos) != '\0'))
+	while (*s1 != '\0' && *s2 != '\0')
 	{
-		res = *(s1 + pos) - *(s2 + pos);
-		if (res == 0)
-			pos++;
-		else
+		if (*s1 != *s2)
+		{
+			resultado = *s1 - *s2;
 			break;
+		}
+		s1++;
+		s2++;
 	}
-	return (res);
+	return (resultado);
 }
-/**
-*getLength - concatnate
-*@s: dest pointer
-*Return: something
-*/
-int getLength(char *s)
-{
-	int le = 0;
 
-	while (*(s + le) != '\0')
-	{
-		le++;
-	}
-	return (le);
-}
+

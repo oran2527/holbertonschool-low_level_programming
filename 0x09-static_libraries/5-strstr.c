@@ -1,57 +1,39 @@
 #include "holberton.h"
-#include <stddef.h>
-int getLength(char *s);
+#include <stdlib.h>
 /**
- *_strstr - concatnate
- *@haystack: dest pointer
- *@needle: src pointer
-*Return: something
+ * _strchr - prints
+ * @haystack: The character to print
+ * @needle: The character to print
+ * Return: value
  */
-char *_strstr(char *haystack, char *needle)
+ char *_strstr(char *haystack, char *needle)
 {
-	int pos = 0;
-	int cpos = 0;
-	int matched = 0;
-	int compl = getLength(needle);
-	int stringL = getLength(haystack);
-
-	while (pos <= stringL - compl && matched == 0)
-	{
-		cpos = 0;
-		while (*(needle + cpos) != '\0')
-		{
-			if (*(haystack + pos + cpos) == *(needle + cpos))
-				cpos++;
-			else
-				break;
-		}
-		if (cpos != compl)
-			pos++;
-		else
-		{
-			matched = 1;
-			break;
-		}
-
-	}
-	if (matched == 1)
-		return (haystack + pos);
-	else
+	char *pointer1, *pointer2;
+	int i = 0, j = 0, k = 0, count_needle = 0;
+	
+	pointer1 = haystack;
+	pointer2 = needle;
+	if (pointer2 == NULL)
 		return (NULL);
-}
-/**
-*getLength - concatnate
-*@s: dest pointer
-*Return: something
-*/
-
-int getLength(char *s)
-{
-	int le = 0;
-
-	while (*(s + le) != '\0')
+	while (pointer2)
+		k++;
+	if (k == 0) 
+		return (pointer1);
+	for (i = 0; *(pointer1 + i) != '\0'; i++)
 	{
-		le++;
+		if (*(pointer1 + i) == *(pointer2 + j))
+		{
+			for (j = 1, k = 1; *(pointer2 + j) != '\0'; j++, k++)
+			{
+				if (*(pointer1 + (k + i)) == *(pointer2 + (j + k))) 
+					count_needle++;				
+				else
+					j = 0;				
+			}
+		}
+		if (*(pointer1 + i) != *(pointer2 + j))
+				j = 0;
 	}
-	return (le);
+	return (pointer1);
 }
+

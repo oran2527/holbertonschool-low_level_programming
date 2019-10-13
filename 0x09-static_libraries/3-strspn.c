@@ -1,45 +1,45 @@
 #include "holberton.h"
-int getLength(char *s);
+
 /**
- *_strspn - concatnate
- *@s: dest pointer
- *@accept: src pointer
-*Return: something
- */
+ * _strspn - prints
+ * @s: The character to print
+ * @accept: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 unsigned int _strspn(char *s, char *accept)
 {
-	int pos = 0;
-	int cpos = 0;
-	unsigned int res = 0;
+	int elements_accept;
+	int i, j;
+	unsigned int resul = 0;
+	int flag  = 0;
 
-	while ((*(s + pos)) != ' ')
+	for (i = 0; *(accept + i) != '\0'; i++)
+		++elements_accept;
+	for (i = 0; *(s  + i) != '\0'; i++)
 	{
-		while ((*(accept + cpos)) != '\0')
+		if (flag == 0)
 		{
-			if ((*(s + pos)) == (*(accept + cpos)))
+			flag = 0;
+			for (j = 0; *(accept + j) != '\0'; j++)
 			{
-				res += 1;
+				if (*(s + i) == *(accept + j))
+				{
+					resul = resul + 1;
+					flag = 0;
+					break;
+				}
+				else
+				{
+					flag = 1;
+				}
+
 			}
-			cpos++;
 		}
-		cpos = 0;
-		pos++;
+		else
+		{
+			break;
+		}
 	}
-	return (res);
-}
-/**
-*getLength - concatnate
-*@s: dest pointer
-*Return: something
-*/
-
-int getLength(char *s)
-{
-	int le = 0;
-
-	while (*(s + le) != '\0')
-	{
-		le++;
-	}
-	return (le);
+	return (resul);
 }

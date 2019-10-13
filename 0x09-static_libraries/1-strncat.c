@@ -1,39 +1,26 @@
 #include "holberton.h"
-#include <stdio.h>
-int getLength(char *s);
+#include <string.h>
+
 /**
- *_strncat - concatnate
- *@dest: dest pointer
- *@src: src pointer
- *@n: int
- *Return: something
- */
+ * _strncat - prints
+ * @dest: The character to print
+ * @src: The character to print
+ * @n: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
 char *_strncat(char *dest, char *src, int n)
 {
-	int len = getLength(dest);
-	int pos = 0;
+	int count_dest, count_src;
 
-	while (src[pos] != '\0' && pos < n)
+	for (count_dest = 0; *(dest + count_dest) != '\0'; )
+		count_dest++;
+
+	for (count_src = 0; count_src <= n - 1; count_src++)
 	{
-		(*(dest + len)) = (*(src + pos));
-		len++;
-		pos++;
+		*(dest + count_dest) = *(src + count_src);
+		count_dest++;
 	}
-	*(dest + len) = '\0';
+	*(dest + count_dest++) = '\0';
 	return (dest);
-}
-/**
- *getLength - concatnate
- *@s: dest pointer
- *Return: something
- */
-int getLength(char *s)
-{
-	int le = 0;
-
-	while (*(s + le) != '\0')
-	{
-		le++;
-	}
-	return (le);
 }
