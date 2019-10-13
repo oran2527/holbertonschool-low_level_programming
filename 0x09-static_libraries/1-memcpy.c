@@ -1,18 +1,17 @@
 #include "holberton.h"
-
 /**
- * _memcpy - prints
- * @dest: The character to print
- * @src: The character to print
- * @n: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ *_memcpy - copies memory area
+ *@dest: destination
+ *@src: source
+ *@n: integer
+ *Return: a pointer to dest
+ */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-		*(dest + i) = *(src + i);
-	return (dest);
+unsigned int count;
+for (count = 0; count < n; count++)
+{
+dest[count] = src[count];
+}
+return (dest);
 }

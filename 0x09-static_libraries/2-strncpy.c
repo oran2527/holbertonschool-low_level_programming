@@ -1,28 +1,21 @@
 #include "holberton.h"
-#include <string.h>
-#include <stdio.h>
 /**
- * _strncpy - prints
- * @dest: The character to print
- * @src: The character to print
- * @n: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ *_strncpy - copy a string
+ *@dest: destination string
+ *@src: source of string
+ *@n: max byte of src
+ *Return: dest
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int count_src, length_src;
+int i = 0;
+int j;
+while (src[i] != '\0')
+i++;
+for (j = 0; j < n && src[j] != '\0'; j++)
+dest[j] = src[j];
+for (; n > i; i++)
+dest[i] = '\0';
 
-	for (length_src = 0; *(src + length_src) != '\0'; )
-	{
-		length_src++;
-	}
-	for (count_src = 0; count_src < n; count_src++)
-	{
-		if (count_src >= length_src)
-			*(dest + count_src) = '\0';
-		else
-			*(dest + count_src) = *(src + count_src);
-	}
-	return (dest);
+return (dest);
 }

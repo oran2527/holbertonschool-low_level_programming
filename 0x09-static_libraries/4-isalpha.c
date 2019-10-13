@@ -1,14 +1,12 @@
 #include "holberton.h"
 /**
- * _isalpha - prints
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ * _isalpha - checks for alphabetic character
+ * @c: takes in a character
+ * Return: 1 if letter, lowercase, uppercase; 0 for otherwise
+ */
 int _isalpha(int c)
 {
-
-if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 {
 return (1);
 }

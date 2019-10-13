@@ -1,34 +1,21 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
- * _strpbrk - prints
- * @s: The character to print
- * @accept: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ *_strpbrk - searches a string for any of a set of bytes
+ *@s: string
+ *@accept: string
+ *Return: pointer to the byte in s that matches one of the bytes in
+ *accept, or NULL if no such byte is found
+ */
 char *_strpbrk(char *s, char *accept)
 {
-	int i_first = 0;
-	int j_second = 0;
-	char *pointer1 = '\0';
-
-	while (s[i_first])
-	{
-		j_second = 0;
-		while (accept[j_second])
-		{
-			if (s[i_first] == accept[j_second])
-			{
-				pointer1 = &s[i_first];
-				break;
-			}
-			j_second++;
-		}
-		if (pointer1 != '\0')
-			break;
-		i_first++;
-	}
-	return (pointer1);
+int con1, con2;
+for (con1 = 0; s[con1] != '\0'; con1++)
+{
+for (con2 = 0; accept[con2] != '\0'; con2++)
+{
+if (s[con1] == accept[con2])
+return (s + con1);
+}
+}
+return (0);
 }

@@ -1,28 +1,20 @@
 #include "holberton.h"
-#include <stdlib.h>
-
 /**
- * _strchr - prints
- * @s: The character to print
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ *_strchr - locates a character in a string
+ *@s: string
+ *@c: string
+ *Return: a pointer to the first occurrence of character c in the string s
+ *or NULL if character is not found
+ */
 char *_strchr(char *s, char c)
 {
-	char *pointer;
-
-	pointer = s;
-	while (*pointer != '\0')
-	{
-		if (pointer == NULL)
-			return (NULL);
-		else if (*pointer == c)
-			return (pointer);
-		pointer++;
-	}
-	if (*pointer == c)
-		return (pointer);
-	else
-		return (NULL);
+int count;
+for (count = 0; s[count] != '\0'; count++)
+{
+if (s[count] == c)
+return (s + count);
+}
+if (s[count] == c)
+return (s + count);
+return (0);
 }

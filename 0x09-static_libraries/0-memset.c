@@ -1,19 +1,15 @@
 #include "holberton.h"
-
-
 /**
- * _memset - prints
- * @s: The character to print
- * @b: The character to print
- * @n: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ *_memset - fills memory with a constant byte
+ *@s: char
+ *@b: char
+ *@n: integer
+ *Return: return a pointer to the memory area s
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-		*(s + i) = b;
-	return (s);
+unsigned int count;
+for (count = 0; count < n; count++)
+s[count] = b;
+return (s);
 }

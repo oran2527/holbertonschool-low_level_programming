@@ -1,25 +1,18 @@
 #include "holberton.h"
-#include <string.h>
-
 /**
- * _strcpy - prints
- * @dest: The character to print
- * @src: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ * _strcpy - copies the string pointed to by src,
+ * @dest: destnation poiter to take value
+ * @src: array poited that gets copied
+ *
+ * Description: copies string pointed to by src,
+ * Return: dest
+ */
 char *_strcpy(char *dest, char *src)
 {
-	char *start;
+int i;
 
-	start = dest;
-
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (start);
+for (i = 0; src[i] != '\0'; i++)
+dest[i] = src[i];
+dest[i] = '\0';
+return (dest);
 }

@@ -1,19 +1,15 @@
-#include<stdio.h>
-#include<string.h>
 #include "holberton.h"
-
 /**
- * _strlen - prints
- * @s: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ *_strlen - return the length of a string
+ *@s: character
+ *Return: length os string
+ */
 int _strlen(char *s)
 {
-	char *p;
-
-	p = s;
-	while (*p)
-		++p;
-	return (p - s);
+int i;
+for (i = 0; s[i] != '\0'; i++)
+{
+;
+}
+return (i);
 }

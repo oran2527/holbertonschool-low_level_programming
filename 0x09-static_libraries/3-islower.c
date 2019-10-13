@@ -1,16 +1,12 @@
 #include "holberton.h"
 /**
- * _islower - prints
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ * _islower - returns 1 if lowercase alphabet and 0 otherwise
+ * @c: takes in a character
+ * Return: 0 for uppercase, 1 for lowercase
+ */
 int _islower(int c)
 {
-int i;
-i = c;
-
-if (i >= 97 && i <= 122)
+if (c >= 'a' && c <= 'z')
 {
 return (1);
 }

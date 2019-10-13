@@ -1,20 +1,12 @@
 #include "holberton.h"
 /**
- * _abs - prints
- * @n: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- **/
+ * _abs - function that prints the absolute value of a number
+ * @n: takes in an integer
+ * Return: 1 if > 0, 0 if == 0, positive if negative
+ */
 int _abs(int n)
 {
-if (n >= 0)
-{
-return (n);
-}
 if (n < 0)
-{
-n = n * (-1);
+return (n * -1);
 return (n);
-}
-return (0);
 }
