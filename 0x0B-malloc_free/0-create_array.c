@@ -14,14 +14,21 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 	{
-		return (NULL);
+		pointer1 = NULL;
 	}
 	else
 	{
 		pointer1 = (char *)malloc(size * sizeof(*pointer1));
 		if (pointer1 != NULL)
+		{
 			for (i = 0; i < 98; i++)
 				*(pointer1 + i) = c;
+			*(pointer1 + (i + 1)) = '\0';
+		}
+		else
+		{
+			pointer1 = NULL;
+		}
 	}
 	return (pointer1);
 }
