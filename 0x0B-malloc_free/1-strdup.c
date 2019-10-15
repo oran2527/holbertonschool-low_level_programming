@@ -7,21 +7,21 @@
  * Return:  pointer1
  * On error, NULL is returned
  **/
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
 	char *pointer1;
 	int i;
 
-	if (size == 0)
+	if (str == NULL)
 	{
-		return (NULL);
+		pointer1 = NULL;
 	}
 	else
 	{
-		pointer1 = (char *)malloc(size * sizeof(*pointer1));
-		if (pointer1 != NULL)
-			for (i = 0; i < 98; i++)
-				*(pointer1 + i) = c;
+		for (i = 0; i != '\0'; i++)
+		pointer1 = (char *)malloc(i * sizeof(*pointer1));
+		
 	}
 	return (pointer1);
 }
+
