@@ -12,7 +12,9 @@ char *_strdup(char *str)
 	unsigned int i, j = 0;
 
 	if (str == NULL)
+	{
 		return (NULL);
+	}
 	else
 	{
 		while (*(str + j) != '\0')
@@ -24,7 +26,10 @@ char *_strdup(char *str)
 				*(pointer1 + i) = *(str + i);
 			*(pointer1 + (i + 1)) = '\0';
 			return (pointer1);
-		}		
+		}
+		else
+		{
+			return (NULL);
+		}
 	}
-	return (pointer1);
 }
