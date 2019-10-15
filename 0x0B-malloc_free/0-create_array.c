@@ -23,8 +23,7 @@ char *create_array(unsigned int size, char c)
 		if (pointer1 != NULL)
 		{
 			for (i = 0; i < size; i++)
-				*(pointer1 + i) = c;
-			*(pointer1 + (i + 1)) = '\0';
+				*(pointer1 + i) = c;			
 		}
 		else
 		{
