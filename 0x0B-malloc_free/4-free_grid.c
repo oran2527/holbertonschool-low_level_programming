@@ -1,15 +1,15 @@
 #include "holberton.h"
 /**
- * alloc_grid - pointer bidimensional
- * @width: width
+ * free_grid - clean space memory
+ * @grid: matrix
  * @height: height
- * Return:  pointer to pointer
+ * Return:  matrix deallocated free of space
  **/
 void free_grid(int **grid, int height)
 {
 	int i;
-	
+
 	for (i = 0; i < height; i++)
-		free (grid[i]);
-	free(grid);	
+		free(grid[i]);
+	free(grid);
 }
