@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * string_nconcat - concatenates two pointers by n src chars
  * @s1: pointer dest
