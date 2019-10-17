@@ -19,12 +19,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 			*(pointer + i) = 0;			
 		return (pointer);
 	}
-	if (pointer == NULL)
-	{
-		for (i = 0; i < nmemb; i++)
-			free(*(pointer + i));
-		free(pointer);
-		return (NULL);
-	}
 	return (pointer);
 }
