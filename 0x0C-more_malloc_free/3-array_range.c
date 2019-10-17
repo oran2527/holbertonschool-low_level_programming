@@ -7,18 +7,16 @@
  **/
 int *array_range(int min, int max)
 {
-	char *pointer;
-	unsigned int i;
+	int *pointer = NULL;
+	int i;
 
-	if (nmemb == 0 || size == 0)
+	if (min > max)
 		return (NULL);
-	pointer = malloc(size * nmemb);
+	pointer = malloc(sizeof(int) * (max - min + 1));
 	if (pointer != NULL)
 	{
-		for (i = 0; i < nmemb; i++)
-		{
-			*(pointer + i) = 0;
-		}
+		for (i = 0; (i <= (max - min + 1)) || (min <= max); i++, min++)
+			*(pointer + i) = min;
 		return (pointer);
 	}
 	return (NULL);
