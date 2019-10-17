@@ -19,14 +19,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	for (j = 0; *(s2 + j) != '\0'; )
 		j++;
-	if (n >= j)
-		n = j;
 	pointer = malloc((i + n + 1) * sizeof(char));
 	if (pointer != NULL)
 	{
 		for (m = 0; m < i; m++)
 			*(pointer + m) = *(s1 + m);
-		for (k = 0; k < n; k++)
+		for (k = 0; k < n && k < j; k++)
 			*(pointer + m + k) = *(s2 + k);
 		*(pointer + (i + n + 1)) = '\0';
 		return (pointer);
