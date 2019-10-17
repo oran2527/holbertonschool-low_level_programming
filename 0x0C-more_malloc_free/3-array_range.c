@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * _calloc - calloc
- * @nmemb: members
- * @size: size
+ * array_range - array
+ * @min: minimunm
+ * @max: maximum
  * Return: pointer
  **/
-void *_calloc(unsigned int nmemb, unsigned int size)
+int *array_range(int min, int max)
 {
 	char *pointer;
 	unsigned int i;
@@ -17,9 +17,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		for (i = 0; i < nmemb; i++)
 		{
-			*(pointer + i) = 0;			
+			*(pointer + i) = 0;
 		}
 		return (pointer);
 	}
-	return (pointer);
+	return (NULL);
 }
