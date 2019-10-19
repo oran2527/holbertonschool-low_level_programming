@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * print_times_table - print tables
  * @n: number table
@@ -8,16 +9,16 @@ void print_times_table(int n)
 {
 	int j, i, resul;
 
-	if (n <= 15 || n >= 0)
+	if (n <= 15 && n >= 0)
 	{
 		for (i = 0; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
 				resul = j * i;
-				if (resul == 0)
-					_putchar(0);
-				if (resul != 0)
+				if (j == 0)
+					_putchar(resul + 48);
+				if (j > 0)
 				{
 					_putchar(',');
 					if (resul < 10)
@@ -33,9 +34,11 @@ void print_times_table(int n)
 						divide_1000(resul);
 				}
 			}
+			_putchar('\n');
 		}
 	}
 }
+
 /**
  * print_spaces - print spaces
  * @amount: amount spaces
@@ -48,6 +51,7 @@ void print_spaces(int amount)
 	for (i = 0; i < amount; i++)
 		_putchar(' ');
 }
+
 /**
  * divide_1000 - print 4 digits numbers
  * @resul: number
@@ -61,6 +65,7 @@ void divide_1000(int resul)
 	_putchar((((resul % 1000) % 100) % 10) + 48);
 
 }
+
 /**
  * divide_100 - print 3 digits numbers
  * @resul: number
@@ -73,6 +78,7 @@ void divide_100(int resul)
 	_putchar(((resul % 100) / 10) + 48);
 	_putchar(((resul % 100) % 10) + 48);
 }
+
 /**
  * divide_10 - print 2 digits numbers
  * @resul: number
@@ -84,4 +90,3 @@ void divide_10(int resul)
 	_putchar((resul / 10) + 48);
 	_putchar((resul % 10) + 48);
 }
-
