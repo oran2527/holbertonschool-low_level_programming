@@ -5,11 +5,13 @@
  * @name: name of the dog
  * @age: age of the dog
  * @owner: name of the dog's owner
- * Return:  nothing
  **/
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d->name = name;
-	d->owner = owner;
-	d->age = age;
+	if (d != NULL)
+	{
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
+	}
 }
