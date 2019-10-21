@@ -1,11 +1,14 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
 
+#include <stdlib.h>
+
 /*
  * Structs, enums and unions definitions
  * Typedefs
  * prototypes
  */
+
 
 int _putchar(char c);
 
@@ -23,5 +26,8 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 
 #endif /* _HOLBERTON_H_ */
