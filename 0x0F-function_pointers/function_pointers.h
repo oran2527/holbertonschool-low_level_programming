@@ -2,6 +2,7 @@
 #define _HOLBERTON_H_
 
 #include <stdlib.h>
+#include <stdio.h>
 /*
  * Structs, enums and unions definitions
  * Typedefs
