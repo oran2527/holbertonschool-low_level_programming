@@ -4,6 +4,7 @@
 /**
  * print_all - print all
  * @format: format
+ * @...: arguments
  * Return: nothing
  **/
 void print_all(const char * const format, ...)
@@ -14,7 +15,7 @@ void print_all(const char * const format, ...)
 
 	len = strlen(format);
 	va_start(args, format);
-	while (i < len && len != '\0')
+	while (len != '\0' && i < len)
 	{
 		switch (format[i])
 		{
