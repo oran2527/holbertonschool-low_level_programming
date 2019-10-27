@@ -1,28 +1,49 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <string.h>
 /**
  * print_all - print all
  * @format: format
- * @...: arguments
  * Return: nothing
  **/
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int i;
+	int i = 0, len, flag = 0;
 	char *argument;
 
-	va_start(args, n);
-	for (i = 0; i < n; i++)
+	len = strlen(format);
+	va_start(args, format);
+	while (i < len && len != '\0')
 	{
-		argument = va_arg(args, char *);
-		if (argument == '\0')
-			printf("(nil)");
-		else
-			printf("%s", argument);
-		if (i < (n - 1))
-			if (separator != '\0')
-				printf("%s", separator);
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", va_arg(args, int));
+				   flag = 0;
+				break;
+			case 'i':
+				printf("%i", va_arg(args, int));
+				   flag = 0;
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				   flag = 0;
+				break;
+			case 's':
+				argument = va_arg(args, char *);
+				if (argument == '\0')
+					printf("(nil)");
+				printf("%s", argument);
+				flag = 0;
+				break;
+			default:
+				flag = 1;
+				break;
+		}
+		if (i < (len - 1) && flag == 0)
+			printf(", ");
+		i++;
 	}
 	va_end(args);
 	printf("\n");
