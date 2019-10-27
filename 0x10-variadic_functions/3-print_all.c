@@ -13,10 +13,10 @@ void print_all(const char * const format, ...)
 	int i = 0, flag = 0;
 	char *argument;
 
-	while (format)
+	while (format != NULL)
 	{
 		va_start(args, format);
-		while (format[i] != '\0')
+		while (format[i] != '\0' && format != NULL)
 		{
 			flag = 0;
 			switch (format[i])
