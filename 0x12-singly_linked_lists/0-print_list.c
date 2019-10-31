@@ -7,7 +7,7 @@
  **/
 size_t print_list(const list_t *h)
 {
-	long unsigned int n = 0, i = 0;
+	unsigned int n = 0, i = 0;
 	const list_t *temp;
 
 	temp = h;
@@ -29,7 +29,7 @@ size_t print_list(const list_t *h)
 		temp = temp->next;
 		n++;
 	}
-	
+
 	printf("[%u] ", temp->len);
 	for (i = 0; i < temp->len; i++)
 		printf("%c", temp->str[i]);
