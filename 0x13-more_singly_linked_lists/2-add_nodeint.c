@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <string.h>
-#include <stdio.h>
 /**
  * add_nodeint - add node to the first position
  * @head: first node
@@ -11,7 +9,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
 	listint_t *temp;
-
+	
+	if (head == NULL)
+		return (NULL);
 	temp = *head;
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
