@@ -14,15 +14,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 	fp = fopen(filename, "r");
-	if (fp == NULL)
+	if (fp == '\0')
 		return (0);
-	if (fp != NULL)
+	if (fp != '\0')
 	{
 		c = getc(fp);
 		while (c != EOF && count < letters)
 		{
 			write(1, &c, 1);
-			c = fgetc(fp);
+			c = getc(fp);
 			count++;
 		}
 		if (count != 0)
