@@ -25,7 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			c = fgetc(fp);
 			count++;
 		}
-		return (count);
+		if (count != 0)
+			return (count);
+		if (count == 0)
+			return (0);
 	}
 	fclose(fp);
 	return (0);
