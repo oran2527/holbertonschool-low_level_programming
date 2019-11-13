@@ -12,26 +12,19 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	fp = open(filename, O_CREAT | O_WRONLY, 0600);
-	if (fp == '\0')
+	fp = open(filename,  O_CREAT | O_WRONLY, 0600);
+	if (fp == -1)
 		return (-1);
 	if (text_content == NULL)
 		return (1);
-	if (fp != '\0')
+	for (i = 0; text_content[i] != '\0'; )
+		i++;
+	check = write(fp, text_content, i);
+	if (check == -1)
 	{
-		if (text_content != NULL)
-		{
-			for (i = 0; text_content[i] != '\0'; )
-				i++;
-			check = write(fp, text_content, i);
-			if (check == -1)
-			{
-				close(fp);
-				return (-1);
-			}
-		}
-		return (1);
+		close(fp);
+		return (-1);
 	}
 	close(fp);
-	return (0);
+	return (1);
 }
