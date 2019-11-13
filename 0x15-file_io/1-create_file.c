@@ -7,7 +7,7 @@
  **/
 int create_file(const char *filename, char *text_content)
 {
-	int fp;
+	int fp, check;
 	size_t  i;
 
 	if (filename == NULL)
@@ -15,13 +15,20 @@ int create_file(const char *filename, char *text_content)
 	fp = open(filename, O_CREAT | O_WRONLY, 0600);
 	if (fp == '\0')
 		return (-1);
+	if (text_content == NULL)
+		return (1);
 	if (fp != '\0')
 	{
 		if (text_content != NULL)
 		{
 			for (i = 0; text_content[i] != '\0'; )
 				i++;
-			write(fp, text_content, i);
+			check = write(fp, text_content, i);
+			if (check == -1)
+			{
+				close(fp);
+				return (-1);
+			}
 		}
 		return (1);
 	}
