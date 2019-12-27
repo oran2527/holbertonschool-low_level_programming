@@ -127,8 +127,9 @@ Infinite loop incoming :(
 		Directory: 0x03-debugging
 		File: 1-main.c
 
-		2. 0 > 972? mandatory
-		Score: 100.00% (Checks completed: 100.00%)
+# 2. 0 > 972? mandatory
+
+Score: 100.00% (Checks completed: 100.00%)
 		This program prints the largest of three integers.
 
 		carrie@ubuntu:/debugging$ cat 2-main.c
