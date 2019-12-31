@@ -19,7 +19,7 @@ int main(void)
 					putchar(n % 10 + '0');
 					putchar(x % 10 + '0');
 					putchar(z % 10 + '0');
-					if (x + n + z != 0 && n < 8)
+					if (x + n + z != 0 && n < 7)
 					{
 						putchar(',');
 						putchar(' ');
