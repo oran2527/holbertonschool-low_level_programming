@@ -3,6 +3,7 @@
  * hash_table_set - function that add new node
  * @key: key
  * @value: value
+ * @ht: hash table
  * Return: 1 if it succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -22,23 +23,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(current->key, key) == 0)
 			{
-				current = current->next;	
-			}	
+				current = current->next;
+			}
 			else
 			{
 				current->value = strdup(value);
 				if (current->value == NULL)
 					return (0);
 				return (1);
-			}	
-		}	
+			}
+		}
 	}
 	new = create_node(key, value);
 	if (new == NULL)
 		return (0);
 	new->next = (ht->array)[i];
 	(ht->array)[i] = new;
-	return (1);	
+	return (1);
 }
 
 /**
@@ -60,7 +61,7 @@ hash_node_t *create_node(const char *key, const char *value)
 	{
 		free(new);
 		return (NULL);
-	}	
+	}
 	new->next = NULL;
 	return (new);
-}	
+}
