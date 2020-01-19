@@ -9,6 +9,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i, size;
 	hash_node_t **current, *node;
 
+	if (ht == NULL)
+		return;
 	i = 0;
 	size = ht->size;
 	current = ht->array;
