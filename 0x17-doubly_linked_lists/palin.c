@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	int i = 0, j = 0, num = 0, len = 0, cont = 0;
+	int i = 0, j = 0, num = 0, len = 0, cont = 0, flag = 0;
 	char buffer[6];
 	
 	for (i = 999; i >= 1; i--)
@@ -13,7 +13,8 @@ int main(void)
 		{
 			num = 0;
 			cont = 0;
-			num = i * j;
+			flag = 0;
+			num = i * j;			
 			sprintf(buffer, "%d", num);
 			len = strlen(buffer);
 			if (len % 2 == 0)
@@ -27,13 +28,14 @@ int main(void)
 				}
 				if (cont == len / 2)
 				{
-					printf("palindrome %s", buffer);
+					printf("palindrome %s\n", buffer);
+					flag = 1;
 					break;
 				}				
 			}
 			else
 			{				
-				for (num = 0; num < (len - 1) / 2; num++)
+				for (num = 0; num < ((len - 1) / 2); num++)
 				{
 					if (buffer[num] == buffer[len - 1 - num])
 					{
@@ -42,13 +44,14 @@ int main(void)
 				}
 				if (cont == (len - 1) / 2)
 				{
-					printf("palindrome %s", buffer);
+					printf("palindrome %s\n", buffer);
+					flag = 1;
 					break;
 				}				
 			}
 		}
-		if (cont == len / 2)
-			break;
+		if (flag == 1)
+			break;		
 	}
 	return (0);
 }
