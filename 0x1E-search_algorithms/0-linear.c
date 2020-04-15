@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linearhash_djb2 - hashes keys for hash table
+ * linear_search - linear search
  * @array: numbers.
  * @size: size of array
  * @value: value to search
