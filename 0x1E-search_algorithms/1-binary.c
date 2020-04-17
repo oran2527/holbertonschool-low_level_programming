@@ -9,19 +9,19 @@
  */
 
 int binary_search(int *array, size_t size, int value)
-{	
+{
 
-	if (size > 0) 
-	{ 
-		size_t mid = size / 2; 
+	if (size > 0)
+	{
+		size_t mid = size / 2;
 
-		if (array[mid] == value) 
-			return mid; 
+		if (array[mid] == value)
+			return (mid);
 
-		if (array[mid] > value) 
-			return (binary_search(&array[mid], mid, value)); 
+		if (array[mid] > value)
+			return (binary_search(&array[mid], mid, value));
 
-		return (binary_search(&array[0], mid, value)); 
-	} 
-        return -1; 	
+		return (binary_search(&array[0], mid, value));
+	}
+	return (-1);
 }
